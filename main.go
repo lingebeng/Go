@@ -1,12 +1,15 @@
 package main
 
 import (
-	. "Go/algorithm/sort"
-	"fmt"
+	. "fmt"
+	"sort"
+	"strings"
 )
 
 func main() {
-	arr := []int{1, 3, 2, 5, 4, 7, 6, 9, 8, 10}
-	MergeSort(&arr, 0, len(arr)-1)
-	fmt.Println(arr)
+	str := "Hello,Go!"
+	chars := strings.Split(str, "")
+	sort.Strings(chars)
+	sorted := strings.Join(chars, "")
+	Println(sorted) // !,GHelloo
 }
